@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        h1 {
+            text-align: center;
+            border-bottom:5px solid rgb(142, 143, 141);
+            padding-bottom: 10px;
+            padding-top: 20px;
+            margin: 0;
+            background-color: white;}
+        #word1 {
+            margin: auto;
+            width: 15%;
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color:grey;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            
+        }
+        #ttext{
+            border:2px solid grey;
+            padding:10px;
+        }
+        h2,#dic{
+            text-align: center;
+        }
+        .total{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">결과!</h1>
+<div id="word1">
+<a style="text-decoration: none; color:white;"href="{%url 'home' %}"><h3>다시 세기!</h3></a>
+</div>
+
+<h2>당신이 입력한 문장의 길이는 총 <span class="total">{{total}}</span>입니다!</h2>
+
+<h2>당신이 입력한 문장</h2>
+<div id="ttext">{{text}}</div>
+<br>
+<div id="dic">
+<h2>단어 카운트</h2>
+{% for word,count in dictionary%}
+
+{{word}}:{{count}}
+<br>
+
+{% endfor %}
+</div>
+</body>
+</html>

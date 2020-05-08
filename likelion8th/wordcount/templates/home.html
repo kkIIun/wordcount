@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin : 0px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom:5px solid rgb(142, 143, 141);
+            padding-bottom: 10px;
+            padding-top: 20px;
+            margin: 0;
+            background-color: white;
+        }
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        #word {
+            margin: auto;
+            width: 15%;
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color:grey;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            
+        }
+        #text{
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>wordcount!</h1>
+<div id="word">
+<a href="{%url 'about' %}"><h3>wordcount란?</h3></a>
+</div>
+<h3 style="text-align: center;">글자를 입력해 주세요!!</h3>
+<form action="{%url 'result'%}" method="GET" id="text">
+    <textarea name="fulltext" id="" cols="100" rows="30" placeholder="아무 말이나 적어용">
+    </textarea>
+
+    <button type="submit">입력</button>
+</form>
+</body>
+</html>
